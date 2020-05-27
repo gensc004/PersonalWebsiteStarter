@@ -79,7 +79,7 @@ const mapStateToProps = (state) => {
     } = state;
 
     return {
-        location: router.location.pathname,
+        location: router.location.pathname, // /projects/calculator
     }
 };
 

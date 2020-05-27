@@ -1,6 +1,7 @@
 import Home from "../Components/Routes/Home";
 import About from "../Components/Routes/About";
 import Calculator from "../Components/Routes/Projects/Calculator";
+import LoginForm from "../Components/Routes/Projects/LoginForm";
 
 export const RouteDefinitions = {
     HOME: {
@@ -12,8 +13,12 @@ export const RouteDefinitions = {
         id: 'ABOUT'
     },
     CALCULATOR: {
-        label: "Calculator",
+        label: "Assembly RValue Calculator",
         id: 'CALCULATOR'
+    },
+    LOGIN_FORM: {
+        label: "Login Form",
+        id: "LOGIN_FORM"
     }
 }
 
@@ -22,7 +27,8 @@ export default [
         title: RouteDefinitions.HOME.label,
         path: '/',
         routeId: RouteDefinitions.HOME.id,
-        Component: Home
+        Component: Home,
+        isDefault: true
     },
     {
         title: RouteDefinitions.ABOUT.label,
@@ -34,5 +40,10 @@ export default [
         path: '/projects/calculator',
         routeId: RouteDefinitions.CALCULATOR.id,
         Component: Calculator
-    },
+    }, {
+        title: RouteDefinitions.LOGIN_FORM.label,
+        routeId: RouteDefinitions.LOGIN_FORM.id,
+        path: '/projects/loginForm',
+        Component: LoginForm
+    }
 ];
